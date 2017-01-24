@@ -91,12 +91,6 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Medical_Journals_Publication\Medical_Journals_Publication.csproj">
-      <Project>{06547C17-1F0E-4A3E-8ECB-9F60F2CC69E2}</Project>
-      <Name>Medical_Journals_Publication</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.

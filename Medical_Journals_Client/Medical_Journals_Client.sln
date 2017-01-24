@@ -7,10 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medical_Journals_Client", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CAD_Medical_Journals", "CAD_Medical_Journals\CAD_Medical_Journals.csproj", "{4AB5D2C3-7AEA-4CDA-8146-78E573C53BFB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medical_Journals_Publication", "Medical_Journals_Publication\Medical_Journals_Publication.csproj", "{06547C17-1F0E-4A3E-8ECB-9F60F2CC69E2}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medical_Journals_Publication.Tests", "Medical_Journals_Publication.Tests\Medical_Journals_Publication.Tests.csproj", "{29965026-E018-4D35-95F4-FDBFEEC8183F}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,14 +21,6 @@ Global
 		{4AB5D2C3-7AEA-4CDA-8146-78E573C53BFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4AB5D2C3-7AEA-4CDA-8146-78E573C53BFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4AB5D2C3-7AEA-4CDA-8146-78E573C53BFB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{06547C17-1F0E-4A3E-8ECB-9F60F2CC69E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{06547C17-1F0E-4A3E-8ECB-9F60F2CC69E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{06547C17-1F0E-4A3E-8ECB-9F60F2CC69E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{06547C17-1F0E-4A3E-8ECB-9F60F2CC69E2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{29965026-E018-4D35-95F4-FDBFEEC8183F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{29965026-E018-4D35-95F4-FDBFEEC8183F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{29965026-E018-4D35-95F4-FDBFEEC8183F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{29965026-E018-4D35-95F4-FDBFEEC8183F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

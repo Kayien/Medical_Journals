@@ -21,5 +21,29 @@ namespace Medical_Journals_Client
         {
 
         }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        //Validating empty username field
+        private void btnSignin_Click(object sender, EventArgs e)
+        {
+            if(txtUsername.Text == "")
+            {
+                errorProvider1.SetError(txtUsername, "The field Username is requerid");
+                txtUsername.Focus();
+                return;
+            }
+            errorProvider1.SetError(txtUsername, "");
+            //Validating empty password field
+            if (txtPassword.Text == "")
+            {
+                errorProvider1.SetError(txtPassword, "The field Password is requerid");
+                txtPassword.Focus();
+                return;
+            }
+            errorProvider1.SetError(txtPassword, "");
+        }
     }
 }

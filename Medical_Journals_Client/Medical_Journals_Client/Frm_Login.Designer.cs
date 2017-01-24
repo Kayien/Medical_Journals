@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Login));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnSignin = new MetroFramework.Controls.MetroTile();
@@ -35,7 +36,11 @@
             this.btnCancel = new MetroFramework.Controls.MetroButton();
             this.lnkForgot = new MetroFramework.Controls.MetroLink();
             this.txtPassword = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -43,19 +48,20 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(23, 64);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(112, 111);
+            this.pictureBox1.Size = new System.Drawing.Size(129, 131);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
             // btnSignin
             // 
-            this.btnSignin.Location = new System.Drawing.Point(247, 140);
+            this.btnSignin.Location = new System.Drawing.Point(247, 143);
             this.btnSignin.Name = "btnSignin";
             this.btnSignin.Size = new System.Drawing.Size(75, 23);
             this.btnSignin.TabIndex = 2;
             this.btnSignin.Text = "&Sign In";
             this.btnSignin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnSignin.Click += new System.EventHandler(this.btnSignin_Click);
             // 
             // txtUsername
             // 
@@ -69,15 +75,16 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(326, 140);
+            this.btnCancel.Location = new System.Drawing.Point(326, 143);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 3;
             this.btnCancel.Text = "&Cancel";
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // lnkForgot
             // 
-            this.lnkForgot.Location = new System.Drawing.Point(271, 169);
+            this.lnkForgot.Location = new System.Drawing.Point(271, 172);
             this.lnkForgot.Name = "lnkForgot";
             this.lnkForgot.Size = new System.Drawing.Size(130, 23);
             this.lnkForgot.TabIndex = 4;
@@ -86,7 +93,7 @@
             // txtPassword
             // 
             this.txtPassword.CustomBackground = true;
-            this.txtPassword.Location = new System.Drawing.Point(175, 97);
+            this.txtPassword.Location = new System.Drawing.Point(175, 114);
             this.txtPassword.MaxLength = 50;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '●';
@@ -95,22 +102,52 @@
             this.txtPassword.UseStyleColors = true;
             this.txtPassword.UseSystemPasswordChar = true;
             // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.Location = new System.Drawing.Point(175, 46);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(68, 19);
+            this.metroLabel1.TabIndex = 5;
+            this.metroLabel1.Text = "Username";
+            // 
+            // metroLabel2
+            // 
+            this.metroLabel2.AutoSize = true;
+            this.metroLabel2.Location = new System.Drawing.Point(175, 94);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(63, 19);
+            this.metroLabel2.TabIndex = 6;
+            this.metroLabel2.Text = "Password";
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            this.errorProvider1.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider1.Icon")));
+            // 
             // Frm_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(433, 218);
+            this.ClientSize = new System.Drawing.Size(460, 219);
+            this.Controls.Add(this.metroLabel2);
+            this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.lnkForgot);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.btnSignin);
             this.Controls.Add(this.pictureBox1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Frm_Login";
+            this.Resizable = false;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Frm_Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -122,6 +159,9 @@
         private MetroFramework.Controls.MetroButton btnCancel;
         private MetroFramework.Controls.MetroLink lnkForgot;
         private MetroFramework.Controls.MetroTextBox txtPassword;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroLabel metroLabel2;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
 

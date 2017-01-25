@@ -48,7 +48,10 @@ namespace Medical_Journals_Client
             }
             errorProvider1.SetError(txtPassword, "");
 
-               if (!CADUser.ValidaUser(txtUsername.Text, txtPassword.Text))
+
+         
+
+            if (!CADUser.ValidaUser(txtUsername.Text, txtPassword.Text))
                {
                 notifyIcon1.BalloonTipTitle = "Access Deneged!";
                 notifyIcon1.BalloonTipText ="Username or Password incorrect";

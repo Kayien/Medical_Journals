@@ -34,5 +34,11 @@ namespace Medical_Journals_Client
         {
 
         }
+
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+            Frm_Viewer myView = new Frm_Viewer();
+            myView.ShowDialog();
+        }
     }
 }

@@ -75,6 +75,12 @@
     <Compile Include="Frm_MainView.Designer.cs">
       <DependentUpon>Frm_MainView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_Viewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Viewer.Designer.cs">
+      <DependentUpon>Frm_Viewer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Frm_Login.resx">
@@ -82,6 +88,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_MainView.resx">
       <DependentUpon>Frm_MainView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Viewer.resx">
+      <DependentUpon>Frm_Viewer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -125,6 +134,25 @@
       <Project>{4ab5d2c3-7aea-4cda-8146-78e573c53bfb}</Project>
       <Name>CAD_Medical_Journals</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

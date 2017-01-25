@@ -50,6 +50,7 @@
             this.editorialIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.creationDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.categoryIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.dS_Medical_Journals)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.journalCategoriesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
@@ -226,11 +227,21 @@
             this.categoryIdDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.categoryIdDataGridViewTextBoxColumn.ValueMember = "Id";
             // 
+            // metroButton1
+            // 
+            this.metroButton1.Location = new System.Drawing.Point(378, 40);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(75, 23);
+            this.metroButton1.TabIndex = 4;
+            this.metroButton1.Text = "metroButton1";
+            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
+            // 
             // Frm_MainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(888, 536);
+            this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.metroComboBox1);
             this.Controls.Add(this.txtSearch);
@@ -270,5 +281,6 @@
         private System.Windows.Forms.DataGridViewComboBoxColumn editorialIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn creationDateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewComboBoxColumn categoryIdDataGridViewTextBoxColumn;
+        private MetroFramework.Controls.MetroButton metroButton1;
     }
 }

@@ -39,6 +39,7 @@
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -71,6 +72,7 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(226, 23);
             this.txtUsername.TabIndex = 0;
+            this.txtUsername.Text = "juancho@gmail.com";
             this.txtUsername.UseStyleColors = true;
             // 
             // btnCancel
@@ -99,6 +101,7 @@
             this.txtPassword.PasswordChar = '●';
             this.txtPassword.Size = new System.Drawing.Size(226, 23);
             this.txtPassword.TabIndex = 1;
+            this.txtPassword.Text = "Juancho21";
             this.txtPassword.UseStyleColors = true;
             this.txtPassword.UseSystemPasswordChar = true;
             // 
@@ -124,6 +127,12 @@
             // 
             this.errorProvider1.ContainerControl = this;
             this.errorProvider1.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider1.Icon")));
+            // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
+            this.notifyIcon1.Text = "Medical Journals";
+            this.notifyIcon1.Visible = true;
             // 
             // Frm_Login
             // 
@@ -162,6 +171,7 @@
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.NotifyIcon notifyIcon1;
     }
 }
 

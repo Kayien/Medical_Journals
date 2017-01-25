@@ -58,16 +58,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DS_Medical_Journals.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Medical_Journals.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Frm_Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Frm_Login.Designer.cs">
       <DependentUpon>Frm_Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_MainView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_MainView.Designer.cs">
+      <DependentUpon>Frm_MainView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Frm_Login.resx">
       <DependentUpon>Frm_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_MainView.resx">
+      <DependentUpon>Frm_MainView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -78,6 +92,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="DS_Medical_Journals.xsc">
+      <DependentUpon>DS_Medical_Journals.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Medical_Journals.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Medical_Journals.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Medical_Journals.xss">
+      <DependentUpon>DS_Medical_Journals.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -94,6 +119,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MetroFramework.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CAD_Medical_Journals\CAD_Medical_Journals.csproj">
+      <Project>{4ab5d2c3-7aea-4cda-8146-78e573c53bfb}</Project>
+      <Name>CAD_Medical_Journals</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

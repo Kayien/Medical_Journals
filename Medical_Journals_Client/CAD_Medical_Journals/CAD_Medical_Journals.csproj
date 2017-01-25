@@ -40,7 +40,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="CADJournal.cs" />
+    <Compile Include="CADUser.cs" />
+    <Compile Include="DS_Medical_Journals.cs">
+      <DependentUpon>DS_Medical_Journals.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DS_Medical_Journals.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

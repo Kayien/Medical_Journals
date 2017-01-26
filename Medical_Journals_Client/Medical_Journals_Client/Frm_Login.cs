@@ -22,7 +22,7 @@ namespace Medical_Journals_Client
 
         private void Frm_Login_Load(object sender, EventArgs e)
         {
-
+          
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -48,10 +48,9 @@ namespace Medical_Journals_Client
             }
             errorProvider1.SetError(txtPassword, "");
 
-
          
 
-            if (!CADUser.ValidaUser(txtUsername.Text, txtPassword.Text))
+            if (!CADUser.ValidaUser(txtUsername.Text, txtPassword.Text ))
                {
                 notifyIcon1.BalloonTipTitle = "Access Deneged!";
                 notifyIcon1.BalloonTipText ="Username or Password incorrect";
@@ -72,5 +71,8 @@ namespace Medical_Journals_Client
             notifyIcon1.Visible = true;
             notifyIcon1.ShowBalloonTip(3000);
         }
+
+        
+
     }
 }

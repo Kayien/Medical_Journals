@@ -13,6 +13,7 @@ namespace Medical_Journals_Client
 {
     public partial class Frm_MainView : MetroFramework.Forms.MetroForm
     {
+
         public Frm_MainView()
         {
             InitializeComponent();
@@ -20,25 +21,28 @@ namespace Medical_Journals_Client
 
         private void Frm_MainView_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'dS_Medical_Journals.Editorials' Puede moverla o quitarla según sea necesario.
-            this.editorialsTableAdapter.Fill(this.dS_Medical_Journals.Editorials);
             // TODO: esta línea de código carga datos en la tabla 'dS_Medical_Journals.Journals' Puede moverla o quitarla según sea necesario.
             this.journalsTableAdapter.Fill(this.dS_Medical_Journals.Journals);
-            // TODO: esta línea de código carga datos en la tabla 'dS_Medical_Journals.JournalCategories' Puede moverla o quitarla según sea necesario.
-            this.journalCategoriesTableAdapter.Fill(this.dS_Medical_Journals.JournalCategories);
-            
-
         }
 
-        private void dgvDatos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        // Cerrar la aplicación
+        private void btnLogout_Click(object sender, EventArgs e)
         {
 
-        }
+           Application.Exit();        }
 
-        private void metroButton1_Click(object sender, EventArgs e)
+        //Evento 2 click para abrir el documento en el viewer PDF
+        private void dgvDatos_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+          var ruta = dgvDatos.CurrentRow.Cells[5].Value.ToString();
             Frm_Viewer myView = new Frm_Viewer();
+            myView.axAcroPDF.src = ruta + "#toolbar=0";
             myView.ShowDialog();
+
+
+
         }
+
+        
     }
 }

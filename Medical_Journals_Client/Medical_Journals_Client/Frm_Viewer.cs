@@ -12,19 +12,15 @@ namespace Medical_Journals_Client
 {
     public partial class Frm_Viewer : MetroFramework.Forms.MetroForm
     {
+        
         public Frm_Viewer()
         {
             InitializeComponent();
         }
 
-        private void Frm_Viewer_Load(object sender, EventArgs e)
+        private void axAcroPDF_Enter(object sender, EventArgs e)
         {
-
-        }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
+            axAcroPDF.setShowToolbar(false);
         }
     }
 }

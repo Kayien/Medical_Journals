@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Viewer));
             this.axAcroPDF = new AxAcroPDFLib.AxAcroPDF();
-            this.btnClose = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF)).BeginInit();
             this.SuspendLayout();
             // 
@@ -40,35 +39,22 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.axAcroPDF.Enabled = true;
-            this.axAcroPDF.Location = new System.Drawing.Point(23, 78);
+            this.axAcroPDF.Location = new System.Drawing.Point(23, 63);
             this.axAcroPDF.Name = "axAcroPDF";
             this.axAcroPDF.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axAcroPDF.OcxState")));
-            this.axAcroPDF.Size = new System.Drawing.Size(812, 405);
+            this.axAcroPDF.Size = new System.Drawing.Size(812, 441);
             this.axAcroPDF.TabIndex = 0;
-            // 
-            // btnClose
-            // 
-            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.Location = new System.Drawing.Point(760, 489);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(75, 23);
-            this.btnClose.TabIndex = 1;
-            this.btnClose.Text = "&Close";
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.axAcroPDF.Enter += new System.EventHandler(this.axAcroPDF_Enter);
             // 
             // Frm_Viewer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(858, 527);
-            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.axAcroPDF);
             this.Name = "Frm_Viewer";
             this.Resizable = false;
             this.Text = "Viewer";
-            this.Load += new System.EventHandler(this.Frm_Viewer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF)).EndInit();
             this.ResumeLayout(false);
 
@@ -76,7 +62,6 @@
 
         #endregion
 
-        private AxAcroPDFLib.AxAcroPDF axAcroPDF;
-        private MetroFramework.Controls.MetroButton btnClose;
+        public AxAcroPDFLib.AxAcroPDF axAcroPDF;
     }
 }

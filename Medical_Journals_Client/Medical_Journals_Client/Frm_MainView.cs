@@ -47,5 +47,10 @@ namespace Medical_Journals_Client
             this.journalsTableAdapter.Fill(this.dSMedical_Journals.Journals);
 
         }
+
+        private void txtSearch_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

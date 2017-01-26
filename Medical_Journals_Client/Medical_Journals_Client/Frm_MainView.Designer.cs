@@ -31,16 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_MainView));
             this.dgvDatos = new System.Windows.Forms.DataGridView();
-            this.btnLogout = new MetroFramework.Controls.MetroButton();
-            this.dSMedical_Journals = new Medical_Journals_Client.DSMedical_Journals();
-            this.journalsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.journalsTableAdapter = new Medical_Journals_Client.DSMedical_JournalsTableAdapters.JournalsTableAdapter();
-            this.categoriesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.categoriesTableAdapter = new Medical_Journals_Client.DSMedical_JournalsTableAdapters.CategoriesTableAdapter();
-            this.editorialsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.editorialsTableAdapter = new Medical_Journals_Client.DSMedical_JournalsTableAdapters.EditorialsTableAdapter();
-            this.subscriptionsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.subscriptionsTableAdapter = new Medical_Journals_Client.DSMedical_JournalsTableAdapters.SubscriptionsTableAdapter();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,14 +38,25 @@
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.languageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.categoriesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dSMedical_Journals = new Medical_Journals_Client.DSMedical_Journals();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.editorialsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.filePathDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.journalsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnLogout = new MetroFramework.Controls.MetroButton();
+            this.journalsTableAdapter = new Medical_Journals_Client.DSMedical_JournalsTableAdapters.JournalsTableAdapter();
+            this.categoriesTableAdapter = new Medical_Journals_Client.DSMedical_JournalsTableAdapters.CategoriesTableAdapter();
+            this.editorialsTableAdapter = new Medical_Journals_Client.DSMedical_JournalsTableAdapters.EditorialsTableAdapter();
+            this.subscriptionsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.subscriptionsTableAdapter = new Medical_Journals_Client.DSMedical_JournalsTableAdapters.SubscriptionsTableAdapter();
+            this.txtSearch = new MetroFramework.Controls.MetroTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dSMedical_Journals)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.journalsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSMedical_Journals)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.editorialsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.journalsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.subscriptionsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -88,57 +89,6 @@
             this.dgvDatos.Size = new System.Drawing.Size(842, 401);
             this.dgvDatos.TabIndex = 0;
             this.dgvDatos.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDatos_CellContentDoubleClick);
-            // 
-            // btnLogout
-            // 
-            this.btnLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnLogout.Location = new System.Drawing.Point(724, 75);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(141, 25);
-            this.btnLogout.TabIndex = 5;
-            this.btnLogout.Text = "Log Out";
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
-            // 
-            // dSMedical_Journals
-            // 
-            this.dSMedical_Journals.DataSetName = "DSMedical_Journals";
-            this.dSMedical_Journals.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // journalsBindingSource
-            // 
-            this.journalsBindingSource.DataMember = "Journals";
-            this.journalsBindingSource.DataSource = this.dSMedical_Journals;
-            // 
-            // journalsTableAdapter
-            // 
-            this.journalsTableAdapter.ClearBeforeFill = true;
-            // 
-            // categoriesBindingSource
-            // 
-            this.categoriesBindingSource.DataMember = "Categories";
-            this.categoriesBindingSource.DataSource = this.dSMedical_Journals;
-            // 
-            // categoriesTableAdapter
-            // 
-            this.categoriesTableAdapter.ClearBeforeFill = true;
-            // 
-            // editorialsBindingSource
-            // 
-            this.editorialsBindingSource.DataMember = "Editorials";
-            this.editorialsBindingSource.DataSource = this.dSMedical_Journals;
-            // 
-            // editorialsTableAdapter
-            // 
-            this.editorialsTableAdapter.ClearBeforeFill = true;
-            // 
-            // subscriptionsBindingSource
-            // 
-            this.subscriptionsBindingSource.DataMember = "Subscriptions";
-            this.subscriptionsBindingSource.DataSource = this.dSMedical_Journals;
-            // 
-            // subscriptionsTableAdapter
-            // 
-            this.subscriptionsTableAdapter.ClearBeforeFill = true;
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -194,6 +144,16 @@
             this.dataGridViewTextBoxColumn9.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.dataGridViewTextBoxColumn9.ValueMember = "Id";
             // 
+            // categoriesBindingSource
+            // 
+            this.categoriesBindingSource.DataMember = "Categories";
+            this.categoriesBindingSource.DataSource = this.dSMedical_Journals;
+            // 
+            // dSMedical_Journals
+            // 
+            this.dSMedical_Journals.DataSetName = "DSMedical_Journals";
+            this.dSMedical_Journals.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // dataGridViewTextBoxColumn10
             // 
             this.dataGridViewTextBoxColumn10.DataPropertyName = "Editorial_Id";
@@ -205,6 +165,11 @@
             this.dataGridViewTextBoxColumn10.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewTextBoxColumn10.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.dataGridViewTextBoxColumn10.ValueMember = "Id";
+            // 
+            // editorialsBindingSource
+            // 
+            this.editorialsBindingSource.DataMember = "Editorials";
+            this.editorialsBindingSource.DataSource = this.dSMedical_Journals;
             // 
             // dataGridViewTextBoxColumn11
             // 
@@ -221,11 +186,56 @@
             this.filePathDataGridViewTextBoxColumn.Name = "filePathDataGridViewTextBoxColumn";
             this.filePathDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // journalsBindingSource
+            // 
+            this.journalsBindingSource.DataMember = "Journals";
+            this.journalsBindingSource.DataSource = this.dSMedical_Journals;
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLogout.Location = new System.Drawing.Point(721, 77);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(144, 29);
+            this.btnLogout.TabIndex = 5;
+            this.btnLogout.Text = "Log Out";
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // journalsTableAdapter
+            // 
+            this.journalsTableAdapter.ClearBeforeFill = true;
+            // 
+            // categoriesTableAdapter
+            // 
+            this.categoriesTableAdapter.ClearBeforeFill = true;
+            // 
+            // editorialsTableAdapter
+            // 
+            this.editorialsTableAdapter.ClearBeforeFill = true;
+            // 
+            // subscriptionsBindingSource
+            // 
+            this.subscriptionsBindingSource.DataMember = "Subscriptions";
+            this.subscriptionsBindingSource.DataSource = this.dSMedical_Journals;
+            // 
+            // subscriptionsTableAdapter
+            // 
+            this.subscriptionsTableAdapter.ClearBeforeFill = true;
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Location = new System.Drawing.Point(265, 77);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(450, 29);
+            this.txtSearch.TabIndex = 7;
+            this.txtSearch.Click += new System.EventHandler(this.txtSearch_Click);
+            // 
             // Frm_MainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(888, 536);
+            this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.dgvDatos);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -234,10 +244,10 @@
             this.Text = " Publication\'s";
             this.Load += new System.EventHandler(this.Frm_MainView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dSMedical_Journals)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.journalsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSMedical_Journals)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.editorialsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.journalsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.subscriptionsBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -278,5 +288,6 @@
         private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.DataGridViewTextBoxColumn filePathDataGridViewTextBoxColumn;
+        private MetroFramework.Controls.MetroTextBox txtSearch;
     }
 }

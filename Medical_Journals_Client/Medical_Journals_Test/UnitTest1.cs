@@ -9,7 +9,7 @@ namespace Medical_Journals_Test
         [TestMethod]
         public void TestMethod1()
         {
-            //Arrage
+            
 
         }
     }

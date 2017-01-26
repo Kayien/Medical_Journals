@@ -1,4 +1,4 @@
-﻿using CAD_Medical_Journals.DS_Medical_JournalsTableAdapters;
+﻿using CAD_Medical_Journals.DSMedical_JournalsTableAdapters;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,9 +11,9 @@ namespace CAD_Medical_Journals
     {
         private static UsersTableAdapter adaptador = new UsersTableAdapter();
 
-        public static bool ValidaUser(string UserName, string PasswordHash)
+        public static bool ValidaUser(string Email, string Password)
         {
-          if(adaptador.ValidaUser(UserName, PasswordHash) == null)
+          if(adaptador.ValidaUser(Email, Password) == null)
             {
                 return false;
             }

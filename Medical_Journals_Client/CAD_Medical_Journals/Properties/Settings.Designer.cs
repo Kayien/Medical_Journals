@@ -33,5 +33,16 @@ namespace CAD_Medical_Journals.Properties {
                 return ((string)(this["MedicalJournalsDBConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDb)\\MSSQLLocalDB;Initial Catalog=HSMedicalJournalsDB;Integrated" +
+            " Security=True")]
+        public string HSMedicalJournalsDBConnectionString {
+            get {
+                return ((string)(this["HSMedicalJournalsDBConnectionString"]));
+            }
+        }
     }
 }

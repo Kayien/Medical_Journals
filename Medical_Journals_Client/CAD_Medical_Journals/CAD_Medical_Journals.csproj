@@ -42,13 +42,10 @@
   <ItemGroup>
     <Compile Include="CADJournal.cs" />
     <Compile Include="CADUser.cs" />
-    <Compile Include="DS_Medical_Journals.cs">
-      <DependentUpon>DS_Medical_Journals.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="DS_Medical_Journals.Designer.cs">
+    <Compile Include="DSMedical_Journals.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DS_Medical_Journals.xsd</DependentUpon>
+      <DependentUpon>DSMedical_Journals.xsd</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
@@ -59,16 +56,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="DS_Medical_Journals.xsc">
-      <DependentUpon>DS_Medical_Journals.xsd</DependentUpon>
+    <None Include="DSMedical_Journals.xsc">
+      <DependentUpon>DSMedical_Journals.xsd</DependentUpon>
     </None>
-    <None Include="DS_Medical_Journals.xsd">
+    <None Include="DSMedical_Journals.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DS_Medical_Journals.Designer.cs</LastGenOutput>
+      <LastGenOutput>DSMedical_Journals.Designer.cs</LastGenOutput>
     </None>
-    <None Include="DS_Medical_Journals.xss">
-      <DependentUpon>DS_Medical_Journals.xsd</DependentUpon>
+    <None Include="DSMedical_Journals.xss">
+      <DependentUpon>DSMedical_Journals.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

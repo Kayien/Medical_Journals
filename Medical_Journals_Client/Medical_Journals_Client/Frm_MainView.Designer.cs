@@ -31,22 +31,32 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_MainView));
             this.dgvDatos = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.editorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.creationDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.journalsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dS_Medical_Journals = new Medical_Journals_Client.DS_Medical_Journals();
             this.btnLogout = new MetroFramework.Controls.MetroButton();
-            this.journalsTableAdapter = new Medical_Journals_Client.DS_Medical_JournalsTableAdapters.JournalsTableAdapter();
+            this.dSMedical_Journals = new Medical_Journals_Client.DSMedical_Journals();
+            this.journalsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.journalsTableAdapter = new Medical_Journals_Client.DSMedical_JournalsTableAdapters.JournalsTableAdapter();
+            this.categoriesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.categoriesTableAdapter = new Medical_Journals_Client.DSMedical_JournalsTableAdapters.CategoriesTableAdapter();
+            this.editorialsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.editorialsTableAdapter = new Medical_Journals_Client.DSMedical_JournalsTableAdapters.EditorialsTableAdapter();
+            this.subscriptionsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.subscriptionsTableAdapter = new Medical_Journals_Client.DSMedical_JournalsTableAdapters.SubscriptionsTableAdapter();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.languageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.filePathDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSMedical_Journals)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.journalsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dS_Medical_Journals)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoriesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.editorialsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.subscriptionsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvDatos
@@ -59,15 +69,16 @@
             this.dgvDatos.AutoGenerateColumns = false;
             this.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
-            this.nameDataGridViewTextBoxColumn,
-            this.descriptionDataGridViewTextBoxColumn,
-            this.dataGridViewTextBoxColumn1,
-            this.priceDataGridViewTextBoxColumn,
-            this.editorDataGridViewTextBoxColumn,
-            this.dataGridViewTextBoxColumn2,
-            this.creationDateDataGridViewTextBoxColumn,
-            this.dataGridViewTextBoxColumn3});
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.languageDataGridViewTextBoxColumn,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11,
+            this.filePathDataGridViewTextBoxColumn});
             this.dgvDatos.DataSource = this.journalsBindingSource;
             this.dgvDatos.Location = new System.Drawing.Point(23, 112);
             this.dgvDatos.MultiSelect = false;
@@ -77,79 +88,6 @@
             this.dgvDatos.Size = new System.Drawing.Size(842, 401);
             this.dgvDatos.TabIndex = 0;
             this.dgvDatos.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDatos_CellContentDoubleClick);
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // descriptionDataGridViewTextBoxColumn
-            // 
-            this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "Description";
-            this.descriptionDataGridViewTextBoxColumn.HeaderText = "Description";
-            this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
-            this.descriptionDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "PublisherId";
-            this.dataGridViewTextBoxColumn1.HeaderText = "PublisherId";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // priceDataGridViewTextBoxColumn
-            // 
-            this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
-            this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
-            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
-            this.priceDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // editorDataGridViewTextBoxColumn
-            // 
-            this.editorDataGridViewTextBoxColumn.DataPropertyName = "Editor";
-            this.editorDataGridViewTextBoxColumn.HeaderText = "Editor";
-            this.editorDataGridViewTextBoxColumn.Name = "editorDataGridViewTextBoxColumn";
-            this.editorDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "EditorialId";
-            this.dataGridViewTextBoxColumn2.HeaderText = "EditorialId";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // creationDateDataGridViewTextBoxColumn
-            // 
-            this.creationDateDataGridViewTextBoxColumn.DataPropertyName = "CreationDate";
-            this.creationDateDataGridViewTextBoxColumn.HeaderText = "CreationDate";
-            this.creationDateDataGridViewTextBoxColumn.Name = "creationDateDataGridViewTextBoxColumn";
-            this.creationDateDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "CategoryId";
-            this.dataGridViewTextBoxColumn3.HeaderText = "CategoryId";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // journalsBindingSource
-            // 
-            this.journalsBindingSource.DataMember = "Journals";
-            this.journalsBindingSource.DataSource = this.dS_Medical_Journals;
-            // 
-            // dS_Medical_Journals
-            // 
-            this.dS_Medical_Journals.DataSetName = "DS_Medical_Journals";
-            this.dS_Medical_Journals.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // btnLogout
             // 
@@ -161,9 +99,127 @@
             this.btnLogout.Text = "Log Out";
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
+            // dSMedical_Journals
+            // 
+            this.dSMedical_Journals.DataSetName = "DSMedical_Journals";
+            this.dSMedical_Journals.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // journalsBindingSource
+            // 
+            this.journalsBindingSource.DataMember = "Journals";
+            this.journalsBindingSource.DataSource = this.dSMedical_Journals;
+            // 
             // journalsTableAdapter
             // 
             this.journalsTableAdapter.ClearBeforeFill = true;
+            // 
+            // categoriesBindingSource
+            // 
+            this.categoriesBindingSource.DataMember = "Categories";
+            this.categoriesBindingSource.DataSource = this.dSMedical_Journals;
+            // 
+            // categoriesTableAdapter
+            // 
+            this.categoriesTableAdapter.ClearBeforeFill = true;
+            // 
+            // editorialsBindingSource
+            // 
+            this.editorialsBindingSource.DataMember = "Editorials";
+            this.editorialsBindingSource.DataSource = this.dSMedical_Journals;
+            // 
+            // editorialsTableAdapter
+            // 
+            this.editorialsTableAdapter.ClearBeforeFill = true;
+            // 
+            // subscriptionsBindingSource
+            // 
+            this.subscriptionsBindingSource.DataMember = "Subscriptions";
+            this.subscriptionsBindingSource.DataSource = this.dSMedical_Journals;
+            // 
+            // subscriptionsTableAdapter
+            // 
+            this.subscriptionsTableAdapter.ClearBeforeFill = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Name";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Name";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Description";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Description";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "Price";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Price";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "Editor";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Editor";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            // 
+            // languageDataGridViewTextBoxColumn
+            // 
+            this.languageDataGridViewTextBoxColumn.DataPropertyName = "Language";
+            this.languageDataGridViewTextBoxColumn.HeaderText = "Language";
+            this.languageDataGridViewTextBoxColumn.Name = "languageDataGridViewTextBoxColumn";
+            this.languageDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "Category_Id";
+            this.dataGridViewTextBoxColumn9.DataSource = this.categoriesBindingSource;
+            this.dataGridViewTextBoxColumn9.DisplayMember = "Name";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Category_Id";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            this.dataGridViewTextBoxColumn9.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn9.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewTextBoxColumn9.ValueMember = "Id";
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "Editorial_Id";
+            this.dataGridViewTextBoxColumn10.DataSource = this.editorialsBindingSource;
+            this.dataGridViewTextBoxColumn10.DisplayMember = "Name";
+            this.dataGridViewTextBoxColumn10.HeaderText = "Editorial_Id";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            this.dataGridViewTextBoxColumn10.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn10.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewTextBoxColumn10.ValueMember = "Id";
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "Publisher_Id";
+            this.dataGridViewTextBoxColumn11.HeaderText = "Publisher_Id";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.ReadOnly = true;
+            this.dataGridViewTextBoxColumn11.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // filePathDataGridViewTextBoxColumn
+            // 
+            this.filePathDataGridViewTextBoxColumn.DataPropertyName = "FilePath";
+            this.filePathDataGridViewTextBoxColumn.HeaderText = "FilePath";
+            this.filePathDataGridViewTextBoxColumn.Name = "filePathDataGridViewTextBoxColumn";
+            this.filePathDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // Frm_MainView
             // 
@@ -178,8 +234,11 @@
             this.Text = " Publication\'s";
             this.Load += new System.EventHandler(this.Frm_MainView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSMedical_Journals)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.journalsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dS_Medical_Journals)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoriesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.editorialsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.subscriptionsBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -189,9 +248,7 @@
         private System.Windows.Forms.DataGridViewComboBoxColumn editorialIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewComboBoxColumn categoryIdDataGridViewTextBoxColumn;
         private MetroFramework.Controls.MetroButton btnLogout;
-        private DS_Medical_Journals dS_Medical_Journals;
-        private System.Windows.Forms.BindingSource journalsBindingSource;
-        private DS_Medical_JournalsTableAdapters.JournalsTableAdapter journalsTableAdapter;
+        
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
@@ -202,5 +259,24 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn creationDateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         public System.Windows.Forms.DataGridView dgvDatos;
+        private DSMedical_Journals dSMedical_Journals;
+        private System.Windows.Forms.BindingSource journalsBindingSource;
+        private DSMedical_JournalsTableAdapters.JournalsTableAdapter journalsTableAdapter;
+        private System.Windows.Forms.BindingSource categoriesBindingSource;
+        private DSMedical_JournalsTableAdapters.CategoriesTableAdapter categoriesTableAdapter;
+        private System.Windows.Forms.BindingSource editorialsBindingSource;
+        private DSMedical_JournalsTableAdapters.EditorialsTableAdapter editorialsTableAdapter;
+        private System.Windows.Forms.BindingSource subscriptionsBindingSource;
+        private DSMedical_JournalsTableAdapters.SubscriptionsTableAdapter subscriptionsTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn languageDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn filePathDataGridViewTextBoxColumn;
     }
 }

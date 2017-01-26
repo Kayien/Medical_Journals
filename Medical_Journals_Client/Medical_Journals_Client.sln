@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medical_Journals_Client", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CAD_Medical_Journals", "CAD_Medical_Journals\CAD_Medical_Journals.csproj", "{4AB5D2C3-7AEA-4CDA-8146-78E573C53BFB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medical_Journals_Test", "Medical_Journals_Test\Medical_Journals_Test.csproj", "{5C07D97D-99EB-4CE9-A993-34553EC37EE3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{4AB5D2C3-7AEA-4CDA-8146-78E573C53BFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4AB5D2C3-7AEA-4CDA-8146-78E573C53BFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4AB5D2C3-7AEA-4CDA-8146-78E573C53BFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C07D97D-99EB-4CE9-A993-34553EC37EE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C07D97D-99EB-4CE9-A993-34553EC37EE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C07D97D-99EB-4CE9-A993-34553EC37EE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C07D97D-99EB-4CE9-A993-34553EC37EE3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

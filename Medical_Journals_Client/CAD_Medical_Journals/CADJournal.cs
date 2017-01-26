@@ -1,4 +1,4 @@
-﻿using CAD_Medical_Journals.DS_Medical_JournalsTableAdapters;
+﻿using CAD_Medical_Journals.DSMedical_JournalsTableAdapters;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +11,7 @@ namespace CAD_Medical_Journals
     {
         private static JournalsTableAdapter adaptador = new JournalsTableAdapter();
 
-        public static DS_Medical_Journals.JournalsDataTable GetData()
+        public static DSMedical_Journals.JournalsDataTable GetData()
         {
             return adaptador.GetData();
         }

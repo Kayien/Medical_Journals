@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 
-namespace Medical_Journals_Client.Utilities
+namespace Medical_Journals_Client
 {
     public class Crypto
     {

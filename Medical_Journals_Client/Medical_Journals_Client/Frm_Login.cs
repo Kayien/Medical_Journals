@@ -10,9 +10,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Medical_Journals_Client
 {
-    
+
     public partial class Frm_Login : MetroFramework.Forms.MetroForm
     {
         public Frm_Login()
@@ -22,8 +23,9 @@ namespace Medical_Journals_Client
 
         private void Frm_Login_Load(object sender, EventArgs e)
         {
-          
+
         }
+
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
@@ -48,31 +50,38 @@ namespace Medical_Journals_Client
             }
             errorProvider1.SetError(txtPassword, "");
 
-         
+            Crypto Encriptado = new Crypto();
+            Encriptado.Encriptar(txtPassword.Text);
+            string passEncrypted = Encriptado.Encriptar(txtPassword.Text);
+            
 
-            if (!CADUser.ValidaUser(txtUsername.Text, txtPassword.Text ))
-               {
-                notifyIcon1.BalloonTipTitle = "Access Deneged!";
-                notifyIcon1.BalloonTipText ="Username or Password incorrect";
-                notifyIcon1.BalloonTipIcon = ToolTipIcon.Error;
-                notifyIcon1.Visible = true;
-                notifyIcon1.ShowBalloonTip(3000);
-                txtUsername.Text = "";
-                txtPassword.Text = "";
-                txtUsername.Focus();
-                return;
-               }
-                Frm_MainView Publications = new Frm_MainView();
-                Publications.Show();
-                this.Hide();
-            notifyIcon1.BalloonTipTitle = "Welcome! to Medical Journals";
-            notifyIcon1.BalloonTipText = "We are preparating everthing";
-            notifyIcon1.BalloonTipIcon = ToolTipIcon.Info;
-            notifyIcon1.Visible = true;
-            notifyIcon1.ShowBalloonTip(3000);
+
+
+
+                 if (!CADUser.ValidaUser(txtUsername.Text, passEncrypted ))
+                    {
+                     notifyIcon1.BalloonTipTitle = "Access Deneged!";
+                     notifyIcon1.BalloonTipText ="Username or Password incorrect";
+                     notifyIcon1.BalloonTipIcon = ToolTipIcon.Error;
+                     notifyIcon1.Visible = true;
+                     notifyIcon1.ShowBalloonTip(3000);
+                     txtUsername.Text = "";
+                     txtPassword.Text = "";
+                     txtUsername.Focus();
+                     return;
+                    }
+                     Frm_MainView Publications = new Frm_MainView();
+                     Publications.Show();
+                     this.Hide();
+                 notifyIcon1.BalloonTipTitle = "Welcome! to Medical Journals";
+                 notifyIcon1.BalloonTipText = "We are preparating everthing";
+                 notifyIcon1.BalloonTipIcon = ToolTipIcon.Info;
+                 notifyIcon1.Visible = true;
+                 notifyIcon1.ShowBalloonTip(3000);
+             
         }
 
-        
+
 
     }
 }

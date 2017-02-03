@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@if (Session["userId"] != null)
+{
+    <h3>Welcome @Session["userName"].ToString()</h3>
+    
+    <p>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li>@Html.ActionLink("Publish", "UploadFile", "Journal")</li>
+                <li>@Html.ActionLink("My Subscriptions", "MySubscriptions", "Journal")</li>
+            </ul>
+        </div>
+    </p>
+
+    @Html.Action("GetById", "Journal", new { username = Session["userName"].ToString() })
+}
+else
+{
+    <h3>Welcome to HS Medical Journals</h3>
+    <h4>Please Log in or Register to access</h4>
+}

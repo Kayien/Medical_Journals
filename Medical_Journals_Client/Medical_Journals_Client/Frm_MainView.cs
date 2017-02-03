@@ -18,6 +18,8 @@ namespace Medical_Journals_Client
         {
             InitializeComponent();
         }
+
+       
         // Cerrar la aplicación
         private void btnLogout_Click(object sender, EventArgs e)
         {
@@ -48,8 +50,29 @@ namespace Medical_Journals_Client
 
         }
 
-        private void txtSearch_Click(object sender, EventArgs e)
+        private void searchingToolStripButton_Click(object sender, EventArgs e)
         {
+            try
+            {
+                this.journalsTableAdapter.Searching(this.dSMedical_Journals.Journals, nameToolStripTextBox.Text);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void buscarToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.journalsTableAdapter.Buscar(this.dSMedical_Journals.Journals, nameToolStripTextBox.Text, ((int)(System.Convert.ChangeType(category_IdToolStripTextBox.Text, typeof(int)))));
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
 
         }
     }

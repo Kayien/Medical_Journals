@@ -131,12 +131,6 @@
     <Content Include="MetroFramework.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CAD_Medical_Journals\CAD_Medical_Journals.csproj">
-      <Project>{4ab5d2c3-7aea-4cda-8146-78e573c53bfb}</Project>
-      <Name>CAD_Medical_Journals</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <COMReference Include="AcroPDFLib">
       <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
       <VersionMajor>1</VersionMajor>

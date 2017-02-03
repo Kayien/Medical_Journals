@@ -9,7 +9,7 @@
     <Shape ID="DesignTable:Users" ZOrder="4" X="1240" Y="133" Height="267" Width="176" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="216" />
     <Shape ID="DesignTable:Categories" ZOrder="14" X="556" Y="133" Height="115" Width="206" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="64" />
     <Shape ID="DesignTable:Editorials" ZOrder="13" X="1924" Y="133" Height="134" Width="198" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="83" />
-    <Shape ID="DesignTable:Journals" ZOrder="12" X="784" Y="133" Height="286" Width="212" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="216" />
+    <Shape ID="DesignTable:Journals" ZOrder="12" X="784" Y="133" Height="324" Width="214" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="216" />
     <Shape ID="DesignTable:Roles" ZOrder="3" X="1696" Y="133" Height="115" Width="176" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="64" />
     <Shape ID="DesignTable:Subscriptions" ZOrder="2" X="1012" Y="133" Height="172" Width="223" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="121" />
     <Shape ID="DesignTable:UserRoles" ZOrder="1" X="1468" Y="133" Height="134" Width="202" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="83" />
@@ -34,7 +34,7 @@
           <Y>170</Y>
         </Point>
         <Point>
-          <X>996</X>
+          <X>998</X>
           <Y>170</Y>
         </Point>
       </RoutePoints>
@@ -46,7 +46,7 @@
           <Y>162</Y>
         </Point>
         <Point>
-          <X>996</X>
+          <X>998</X>
           <Y>162</Y>
         </Point>
       </RoutePoints>
@@ -54,7 +54,7 @@
     <Connector ID="DesignRelation:FK_dbo.Subscriptions_dbo.Journals_Journal_Id" ZOrder="8" LineWidth="11">
       <RoutePoints>
         <Point>
-          <X>996</X>
+          <X>998</X>
           <Y>154</Y>
         </Point>
         <Point>

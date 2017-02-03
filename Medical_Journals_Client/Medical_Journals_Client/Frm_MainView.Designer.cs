@@ -31,6 +31,12 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_MainView));
             this.dgvDatos = new System.Windows.Forms.DataGridView();
+            this.btnLogout = new MetroFramework.Controls.MetroButton();
+            this.buscarToolStrip = new System.Windows.Forms.ToolStrip();
+            this.nameToolStripLabel = new System.Windows.Forms.ToolStripLabel();
+            this.nameToolStripTextBox = new System.Windows.Forms.ToolStripTextBox();
+            this.category_IdToolStripLabel = new System.Windows.Forms.ToolStripLabel();
+            this.buscarToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,14 +51,14 @@
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.filePathDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.journalsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.btnLogout = new MetroFramework.Controls.MetroButton();
             this.journalsTableAdapter = new Medical_Journals_Client.DSMedical_JournalsTableAdapters.JournalsTableAdapter();
             this.categoriesTableAdapter = new Medical_Journals_Client.DSMedical_JournalsTableAdapters.CategoriesTableAdapter();
             this.editorialsTableAdapter = new Medical_Journals_Client.DSMedical_JournalsTableAdapters.EditorialsTableAdapter();
             this.subscriptionsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.subscriptionsTableAdapter = new Medical_Journals_Client.DSMedical_JournalsTableAdapters.SubscriptionsTableAdapter();
-            this.txtSearch = new MetroFramework.Controls.MetroTextBox();
+            this.category_IdToolStripTextBox = new System.Windows.Forms.ToolStripComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
+            this.buscarToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.categoriesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSMedical_Journals)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.editorialsBindingSource)).BeginInit();
@@ -89,6 +95,55 @@
             this.dgvDatos.Size = new System.Drawing.Size(842, 401);
             this.dgvDatos.TabIndex = 0;
             this.dgvDatos.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDatos_CellContentDoubleClick);
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLogout.Location = new System.Drawing.Point(721, 77);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(144, 29);
+            this.btnLogout.TabIndex = 5;
+            this.btnLogout.Text = "Log Out";
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // buscarToolStrip
+            // 
+            this.buscarToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.nameToolStripLabel,
+            this.nameToolStripTextBox,
+            this.category_IdToolStripLabel,
+            this.category_IdToolStripTextBox,
+            this.buscarToolStripButton});
+            this.buscarToolStrip.Location = new System.Drawing.Point(20, 60);
+            this.buscarToolStrip.Name = "buscarToolStrip";
+            this.buscarToolStrip.Size = new System.Drawing.Size(848, 25);
+            this.buscarToolStrip.TabIndex = 6;
+            this.buscarToolStrip.Text = "buscarToolStrip";
+            // 
+            // nameToolStripLabel
+            // 
+            this.nameToolStripLabel.Name = "nameToolStripLabel";
+            this.nameToolStripLabel.Size = new System.Drawing.Size(42, 22);
+            this.nameToolStripLabel.Text = "Name:";
+            // 
+            // nameToolStripTextBox
+            // 
+            this.nameToolStripTextBox.Name = "nameToolStripTextBox";
+            this.nameToolStripTextBox.Size = new System.Drawing.Size(100, 25);
+            // 
+            // category_IdToolStripLabel
+            // 
+            this.category_IdToolStripLabel.Name = "category_IdToolStripLabel";
+            this.category_IdToolStripLabel.Size = new System.Drawing.Size(58, 22);
+            this.category_IdToolStripLabel.Text = "Category:";
+            // 
+            // buscarToolStripButton
+            // 
+            this.buscarToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.buscarToolStripButton.Name = "buscarToolStripButton";
+            this.buscarToolStripButton.Size = new System.Drawing.Size(46, 22);
+            this.buscarToolStripButton.Text = "Buscar";
+            this.buscarToolStripButton.Click += new System.EventHandler(this.buscarToolStripButton_Click);
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -191,16 +246,6 @@
             this.journalsBindingSource.DataMember = "Journals";
             this.journalsBindingSource.DataSource = this.dSMedical_Journals;
             // 
-            // btnLogout
-            // 
-            this.btnLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnLogout.Location = new System.Drawing.Point(721, 77);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(144, 29);
-            this.btnLogout.TabIndex = 5;
-            this.btnLogout.Text = "Log Out";
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
-            // 
             // journalsTableAdapter
             // 
             this.journalsTableAdapter.ClearBeforeFill = true;
@@ -222,20 +267,17 @@
             // 
             this.subscriptionsTableAdapter.ClearBeforeFill = true;
             // 
-            // txtSearch
+            // category_IdToolStripTextBox
             // 
-            this.txtSearch.Location = new System.Drawing.Point(265, 77);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(450, 29);
-            this.txtSearch.TabIndex = 7;
-            this.txtSearch.Click += new System.EventHandler(this.txtSearch_Click);
+            this.category_IdToolStripTextBox.Name = "category_IdToolStripTextBox";
+            this.category_IdToolStripTextBox.Size = new System.Drawing.Size(121, 25);
             // 
             // Frm_MainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(888, 536);
-            this.Controls.Add(this.txtSearch);
+            this.Controls.Add(this.buscarToolStrip);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.dgvDatos);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -244,12 +286,15 @@
             this.Text = " Publication\'s";
             this.Load += new System.EventHandler(this.Frm_MainView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).EndInit();
+            this.buscarToolStrip.ResumeLayout(false);
+            this.buscarToolStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.categoriesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSMedical_Journals)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.editorialsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.journalsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.subscriptionsBindingSource)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -288,6 +333,11 @@
         private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.DataGridViewTextBoxColumn filePathDataGridViewTextBoxColumn;
-        private MetroFramework.Controls.MetroTextBox txtSearch;
+        private System.Windows.Forms.ToolStrip buscarToolStrip;
+        private System.Windows.Forms.ToolStripLabel nameToolStripLabel;
+        private System.Windows.Forms.ToolStripTextBox nameToolStripTextBox;
+        private System.Windows.Forms.ToolStripLabel category_IdToolStripLabel;
+        private System.Windows.Forms.ToolStripButton buscarToolStripButton;
+        private System.Windows.Forms.ToolStripComboBox category_IdToolStripTextBox;
     }
 }
